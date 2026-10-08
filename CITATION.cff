@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this project in published work, please cite it as below."
+title: "Requirements Intake Agent"
+abstract: >-
+  Configurable agent instructions that turn unstructured project requests
+  into a structured intake, flag gaps, write clarifying questions, and link
+  related prior work.
+type: software
+authors:
+  - family-names: Tsige
+    given-names: Yonatan
+version: 1.0.0
+date-released: 2026-10-07
+license: MIT
+keywords:
+  - requirements
+  - intake
+  - business analysis
+  - agents
+  - prompt engineering

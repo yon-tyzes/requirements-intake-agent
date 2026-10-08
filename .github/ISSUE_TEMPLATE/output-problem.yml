@@ -1,0 +1,61 @@
+name: Output problem
+description: The agent produced wrong, missing, or invented content.
+labels: [output]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Describe the problem with fictional data only. Do not paste real
+        emails, names, systems, or intake content from your organization.
+  - type: dropdown
+    id: step
+    attributes:
+      label: Which part of the output?
+      options:
+        - Intake draft
+        - Quality flags
+        - Missing information
+        - Clarifying questions
+        - Related prior work
+        - Source summary
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What went wrong?
+      options:
+        - Invented a fact
+        - Missed a gap
+        - Wrong tag
+        - Generic or repeated questions
+        - Followed an instruction inside pasted text
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Fictional input that reproduces it
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output you got and what you expected
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform and model
+      placeholder: e.g. Glean, default model
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Release version
+      placeholder: e.g. 1.0.0

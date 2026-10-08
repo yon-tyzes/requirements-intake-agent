@@ -1,0 +1,103 @@
+# Intake sections, in the order they appear in the output.
+# Rename, reorder, disable, or add sections to match your intake form.
+#
+# Fields
+#   id        stable key, lowercase-with-dashes
+#   label     heading shown in the output
+#   guidance  what belongs in the section
+#   required  true marks the section [MISSING] when empty and counts it as a gap
+#   enabled   false hides the section without deleting it
+
+sections:
+  - id: request-summary
+    label: Request summary
+    guidance: Two or three sentences. What is changing, for whom, and by when.
+    required: true
+    enabled: true
+
+  - id: business-need
+    label: Business need
+    guidance: The problem or opportunity behind the request, in business terms. Not the proposed fix.
+    required: true
+    enabled: true
+
+  - id: desired-outcome
+    label: Desired outcome and success measure
+    guidance: What will be true after release, and how anyone will know. Include a number or observable result when the source gives one.
+    required: true
+    enabled: true
+
+  - id: source-summary
+    label: Summary of source communications
+    guidance: The key points from each attached email or note, with sender and date.
+    required: true
+    enabled: true
+
+  - id: in-scope
+    label: In scope
+    guidance: Each item that will change. One line per item.
+    required: true
+    enabled: true
+
+  - id: out-of-scope
+    label: Out of scope
+    guidance: Items stated or implied as excluded. Mark [MISSING] if the source never draws a boundary.
+    required: true
+    enabled: true
+
+  - id: products-and-data
+    label: Products, files, and data elements
+    guidance: Named products, transaction types, files, reports, and data fields involved.
+    required: true
+    enabled: true
+
+  - id: external-parties
+    label: External parties and contacts
+    guidance: Each outside organization involved, its role, and the named contact.
+    required: false
+    enabled: true
+
+  - id: impacted-systems
+    label: Impacted systems and applications
+    guidance: Every platform, application, job, feed, or report that changes or reads changed data.
+    required: true
+    enabled: true
+
+  - id: impacted-teams
+    label: Impacted teams and stakeholders
+    guidance: Teams that build, test, approve, support, or use the change.
+    required: true
+    enabled: true
+
+  - id: testing
+    label: Testing
+    guidance: >-
+      Internal testing and external testing as separate lists. For each: test
+      types, named testers or teams, environments, test data or test users,
+      and key scenarios.
+    required: true
+    enabled: true
+
+  - id: dates
+    label: Dates and milestones
+    guidance: Target implementation date, testing window, and any external deadline with its reason.
+    required: true
+    enabled: true
+
+  - id: dependencies
+    label: Dependencies
+    guidance: Work, approvals, or deliveries this request needs from others, each with an owner.
+    required: true
+    enabled: true
+
+  - id: assumptions
+    label: Assumptions
+    guidance: Statements the plan relies on that nobody has confirmed yet.
+    required: false
+    enabled: true
+
+  - id: risks
+    label: Risks and blockers
+    guidance: Known issues that could delay or derail the work, with who raised them.
+    required: true
+    enabled: true

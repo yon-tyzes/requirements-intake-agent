@@ -1,0 +1,124 @@
+# Quality checks the agent runs against its own draft.
+#
+# Fields
+#   id        stable key, lowercase-with-dashes
+#   label     short name shown in the Quality flags table
+#   severity  blocker | warning | note
+#   look_for  what triggers the flag; include example phrases
+#   fix       the one-line fix the agent should suggest
+#   enabled   false skips the check
+
+checks:
+  - id: solution-without-outcome
+    label: Solution without an outcome
+    severity: blocker
+    look_for: >-
+      The request names a fix ("add a field", "build a report", "change the
+      file layout") but never says what business problem it solves or what
+      result it should produce.
+    fix: Ask what goes wrong today and what should be true after release.
+    enabled: true
+
+  - id: vague-action
+    label: Vague action
+    severity: warning
+    look_for: >-
+      Verbs with no object or measure, such as "update the system", "fix the
+      process", "enhance reporting", or "make changes as needed".
+    fix: Ask what changes, in which system, and how the change will be confirmed.
+    enabled: true
+
+  - id: missing-systems
+    label: Systems not named
+    severity: blocker
+    look_for: The change clearly touches systems, but no platform, application, file, or feed is named.
+    fix: Ask for each system by name and whether it changes or only reads changed data.
+    enabled: true
+
+  - id: missing-data-elements
+    label: Data elements not listed
+    severity: warning
+    look_for: A data, file, or report change with no list of the fields or elements involved.
+    fix: Ask for a field list, mapping, or sample record.
+    enabled: true
+
+  - id: missing-dates
+    label: Dates missing
+    severity: blocker
+    look_for: No target implementation date, or no testing window.
+    fix: Ask for the target date, the testing window, and whether either is fixed by an outside deadline.
+    enabled: true
+
+  - id: date-conflict
+    label: Dates conflict
+    severity: blocker
+    look_for: >-
+      Testing ends after implementation, a milestone falls before its
+      dependency, or sources give different dates.
+    fix: Show the conflicting dates side by side and ask which is current.
+    enabled: true
+
+  - id: testing-without-owner
+    label: Testing has no owner
+    severity: blocker
+    look_for: Testing is marked as needed, but no tester, team, or test type is named.
+    fix: Ask who tests, which test types apply, and which environment they use.
+    enabled: true
+
+  - id: testing-scope-unclear
+    label: Internal and external testing not separated
+    severity: warning
+    look_for: The draft does not say whether the external party tests, or treats all testing as one list.
+    fix: Ask whether the external party tests and who signs off on each side.
+    enabled: true
+
+  - id: missing-external-contact
+    label: External contact missing
+    severity: warning
+    look_for: An outside organization is involved, but no named contact appears.
+    fix: Ask for the business contact and the technical or testing contact.
+    enabled: true
+
+  - id: unowned-dependency
+    label: Dependency without an owner
+    severity: warning
+    look_for: A dependency with no named owner or no due date.
+    fix: Ask who owns it and when it is due.
+    enabled: true
+
+  - id: unconfirmed-assumption
+    label: Unconfirmed assumption
+    severity: warning
+    look_for: >-
+      The plan relies on something nobody has confirmed: vendor availability,
+      data availability, an approval, or another team's capacity.
+    fix: Restate it as an assumption and ask who can confirm it.
+    enabled: true
+
+  - id: no-scope-boundary
+    label: No scope boundary
+    severity: warning
+    look_for: The draft lists what is in scope but never states what is out.
+    fix: Ask which related products, systems, or teams are excluded.
+    enabled: true
+
+  - id: unmeasured-outcome
+    label: Outcome has no measure
+    severity: note
+    look_for: The desired outcome has no number, threshold, or observable result.
+    fix: Ask how the requester will judge success one month after release.
+    enabled: true
+
+  - id: conflicting-sources
+    label: Sources disagree
+    severity: blocker
+    look_for: Two sources give different facts about scope, systems, owners, or volumes.
+    fix: Show both versions and ask which is current.
+    enabled: true
+
+  - id: possible-duplicate
+    label: Possible duplicate or related request
+    severity: warning
+    look_for: A prior or open intake shares the same external party, system, and change.
+    fix: Link the intake and ask whether this request replaces, extends, or repeats it.
+    enabled: true
