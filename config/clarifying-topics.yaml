@@ -1,0 +1,118 @@
+# Topics for the clarifying-questions step.
+#
+# Each topic represents a category of system or work that requests often
+# touch. List your organization's own systems under `systems` so the agent
+# knows which names belong to the topic. Add, remove, or rewrite topics and
+# questions freely.
+#
+# Fields
+#   id             stable key, lowercase-with-dashes
+#   label          heading shown in the output
+#   systems        names of your systems in this category (optional)
+#   applies_when   signals that the request touches this topic
+#   questions      starter questions; the agent adapts them to the request
+#   enabled        false skips the topic
+
+topics:
+  - id: customer-facing-systems
+    label: Customer and partner-facing systems
+    systems: []
+    applies_when: The request changes a portal, app, form, order or booking flow, or any screen an outside user works in.
+    questions:
+      - Which systems are affected, and in which environments?
+      - Which screens, fields, validations, or business rules change? Name each one.
+      - Which products, services, or request types are in scope on each system?
+      - Does the system vendor need to make a change, and who owns that request?
+      - What happens to requests, orders, or cases already in progress on the go-live date?
+    enabled: true
+
+  - id: downstream-systems
+    label: Fulfillment, servicing, and downstream systems
+    systems: []
+    applies_when: "The request changes what happens after something is submitted: fulfillment, servicing, billing, case handling, or follow-up work."
+    questions:
+      - Which follow-up processes change, such as updates, corrections, cancellations, or billing?
+      - Do existing records need conversion or backfill?
+      - Do any notices, statements, or letters generated from these records change?
+      - Which servicing teams use the affected screens, queues, or work items?
+    enabled: true
+
+  - id: scheduled-processing
+    label: Scheduled jobs, legacy systems, and batch processing
+    systems: []
+    applies_when: The request touches nightly jobs, scheduled extracts, legacy system programs, or recurring reports.
+    questions:
+      - Which jobs, programs, reports, or extracts change? Give names or IDs.
+      - Does the run schedule, frequency, or cutoff time change?
+      - Do record layouts or file formats change?
+      - Who consumes the output, and how will they learn about the change?
+      - What is the rollback plan if a run fails after release?
+    enabled: true
+
+  - id: application-code
+    label: Application code and services
+    systems: []
+    applies_when: The request requires new or changed logic in an application, service, or API.
+    questions:
+      - Which applications, services, or repositories change, and which team owns each?
+      - Is this new logic, a change to existing rules, or a configuration change?
+      - Do other teams call the affected APIs or shared libraries?
+      - Will the change ship behind a feature flag or in phases?
+      - What logging or monitoring will confirm it works in production?
+    enabled: true
+
+  - id: data-feeds
+    label: Data feeds and integrations
+    systems: []
+    applies_when: The request adds, removes, or changes data sent to or received from another system or organization.
+    questions:
+      - Which inbound and outbound feeds change? Name the source, target, format, and frequency.
+      - Which data elements are added, removed, or redefined? Provide a field list or mapping.
+      - Do receiving systems or organizations need to change their processing, and by when?
+      - Is a test file or sample record available?
+      - How are rejected or failed records handled and reported?
+    enabled: true
+
+  - id: reporting-and-analytics
+    label: Reporting, dashboards, and analytics
+    systems: []
+    applies_when: The changed data feeds a report, dashboard, or metric.
+    questions:
+      - Which reports or dashboards read the affected data?
+      - Does any metric definition or calculation change?
+      - Will historical data be restated, or will the change apply from go-live forward?
+    enabled: true
+
+  - id: access-privacy-compliance
+    label: Access, privacy, and compliance
+    systems: []
+    applies_when: The request adds users, roles, data sharing, or regulated data.
+    questions:
+      - Does the change add user roles or permissions?
+      - Is personal or regulated data added, moved, or shared with a new party?
+      - Does a compliance, legal, privacy, or audit team need to review it before release?
+    enabled: true
+
+  - id: internal-testing
+    label: Internal testing
+    systems: []
+    applies_when: Always, unless the source states that no testing is needed and explains why.
+    questions:
+      - Which teams test, and who is the named contact for each?
+      - Which test types apply, such as system, integration, regression, or user acceptance?
+      - Which environments and test data are needed, and who provides them?
+      - What must be true to start and to finish each test phase?
+      - Do the test dates fit before the implementation date?
+    enabled: true
+
+  - id: external-testing
+    label: External and partner testing
+    systems: []
+    applies_when: An outside organization sends, receives, or uses anything that changes.
+    questions:
+      - Does the external party test, and who is their named test contact?
+      - Which scenarios must they run, and do they need test users or test accounts?
+      - Which environment do they connect to, and is connectivity already in place?
+      - Who signs off on external testing, and where is sign-off recorded?
+      - How will the external party report defects, and who triages them?
+    enabled: true

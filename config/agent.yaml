@@ -1,0 +1,45 @@
+# Organization settings for the intake agent.
+# Replace every value in angle brackets before you build.
+# Run `make check` after editing to validate this file.
+
+name: Requirements Intake Assistant
+description: >-
+  Turns rough project requests into a complete intake draft, flags gaps,
+  writes clarifying questions, and links related prior work.
+
+# The name of the form, tool, or system where intakes are submitted.
+intake_tool: "<your intake form or tool>"
+
+# The role that runs the agent and submits the intake. Examples: account
+# manager, product owner, program officer, clinical liaison, relationship
+# manager, store operations lead.
+requester_role: requester
+
+# The role that reads the output and starts requirements work. Examples:
+# business analyst, systems analyst, clinical informatics analyst, ERP
+# analyst, product analyst.
+analyst_role: systems analyst
+
+# The outside party that usually originates or receives the change. Examples:
+# client, supplier, carrier, health plan, partner agency, software vendor.
+external_party: external partner
+
+# Where completed intakes live. Be specific: a document library, a ticket
+# project, or a folder. The agent can only search what your platform indexes.
+prior_intake_location: "<location of completed intakes>"
+
+max_related_intakes: 3
+
+data_handling: >-
+  Do not copy names of individuals, account or record numbers, or other
+  personal data into the intake. Refer to them by role or record type.
+
+# Settings used only when packaging for Glean (see docs/platforms/glean.md).
+glean:
+  # Leave empty on the first build. The build prints a new ID; paste it here
+  # so later imports update the same agent instead of creating a copy.
+  id: ""
+  # Limit company search to these folders or documents. Leave both lists
+  # empty to let the agent search everything the signed-in user can see.
+  search_urls: []
+  datasource_instances: []

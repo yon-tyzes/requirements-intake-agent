@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agent.schema.json",
+  "title": "Agent settings",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "description",
+    "intake_tool",
+    "requester_role",
+    "analyst_role",
+    "external_party",
+    "prior_intake_location",
+    "max_related_intakes",
+    "data_handling"
+  ],
+  "properties": {
+    "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "description": { "type": "string", "minLength": 1, "maxLength": 300 },
+    "intake_tool": { "type": "string", "minLength": 1 },
+    "requester_role": { "type": "string", "minLength": 1 },
+    "analyst_role": { "type": "string", "minLength": 1 },
+    "external_party": { "type": "string", "minLength": 1 },
+    "prior_intake_location": { "type": "string", "minLength": 1 },
+    "max_related_intakes": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "data_handling": { "type": "string", "minLength": 1 },
+    "glean": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^([0-9a-f]{32})?$",
+          "description": "32-character lowercase hex ID, or empty to generate one."
+        },
+        "search_urls": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" },
+          "uniqueItems": true
+        },
+        "datasource_instances": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

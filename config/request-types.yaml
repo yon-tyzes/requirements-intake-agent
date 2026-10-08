@@ -1,0 +1,76 @@
+# Request types for the classification step.
+#
+# The agent classifies each request as one type before it maps content to
+# sections, then looks closely at the sections and topics listed for that
+# type. Disable every type to skip classification.
+#
+# Fields
+#   id               stable key, lowercase-with-dashes
+#   label            name shown in the Readiness line
+#   description      what makes a request this type
+#   extra_attention  section ids (intake-sections.yaml) or topic ids
+#                    (clarifying-topics.yaml) to check closely for this type
+#   enabled          false leaves the type out
+
+types:
+  - id: new-capability
+    label: New capability
+    description: Something that does not exist today, such as a new form, report, service, or integration.
+    extra_attention:
+      - desired-outcome
+      - in-scope
+      - out-of-scope
+      - impacted-teams
+      - application-code
+    enabled: true
+
+  - id: change-existing
+    label: Change to existing
+    description: A change to how something already works, such as a new field, a new rule, or a different schedule.
+    extra_attention:
+      - impacted-systems
+      - impacted-teams
+      - out-of-scope
+      - internal-testing
+    enabled: true
+
+  - id: defect
+    label: Defect
+    description: Something that is not working as designed.
+    extra_attention:
+      - business-need
+      - impacted-systems
+      - dates
+      - internal-testing
+    enabled: true
+
+  - id: data-or-report
+    label: Data or report
+    description: A new or changed report, extract, or data feed.
+    extra_attention:
+      - products-and-data
+      - data-feeds
+      - reporting-and-analytics
+      - external-testing
+    enabled: true
+
+  - id: compliance-driven
+    label: Compliance-driven
+    description: A change required by a regulation, contract, audit, or policy.
+    extra_attention:
+      - desired-outcome
+      - dates
+      - dependencies
+      - access-privacy-compliance
+    enabled: true
+
+  - id: retirement
+    label: Retirement
+    description: Turning something off or replacing it.
+    extra_attention:
+      - impacted-systems
+      - impacted-teams
+      - dependencies
+      - downstream-systems
+      - scheduled-processing
+    enabled: true

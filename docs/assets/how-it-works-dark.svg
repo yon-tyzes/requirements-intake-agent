@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">How the requirements intake agent works</title>
+  <desc id="desc">Emails, meeting notes, and request forms flow into seven agent steps: list sources, summarize, classify, map to sections, quality checks, search prior intakes, and clarifying questions. The search step reads completed intakes. The steps produce seven output parts, starting with a readiness verdict, then the intake draft, quality flags, missing information, clarifying questions, related prior work, and a source summary.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E6EDF3"/></marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3FB950"/></marker>
+  </defs>
+  <rect width="960" height="420" fill="#0D1117"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#E6EDF3">
+    <text x="125" y="40" font-size="16" font-weight="600" text-anchor="middle">Input</text>
+    <text x="445" y="40" font-size="16" font-weight="600" text-anchor="middle">Agent steps</text>
+    <text x="805" y="40" font-size="16" font-weight="600" text-anchor="middle">Output</text>
+    <rect x="40" y="66" width="170" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="125" y="88" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">Emails</text>
+    <rect x="40" y="114" width="170" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="125" y="136" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">Meeting notes</text>
+    <rect x="40" y="162" width="170" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="125" y="184" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">Request forms</text>
+    <rect x="330" y="66" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="445" y="88" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">1. List sources</text>
+    <rect x="330" y="114" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="445" y="136" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">2. Summarize</text>
+    <rect x="330" y="162" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="445" y="184" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">3. Classify</text>
+    <rect x="330" y="210" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="445" y="232" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">4. Map to sections</text>
+    <rect x="330" y="258" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="445" y="280" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">5. Quality checks</text>
+    <rect x="330" y="306" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="445" y="328" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">6. Search prior intakes</text>
+    <rect x="330" y="354" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="445" y="376" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">7. Clarifying questions</text>
+    <rect x="690" y="66" width="230" height="34" rx="6" fill="#3FB950" stroke="#3FB950" stroke-width="1.5"/>
+    <text x="805" y="88" font-size="14" font-weight="600" text-anchor="middle" fill="#0D1117">1. Readiness</text>
+    <rect x="690" y="114" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="805" y="136" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">2. Intake draft</text>
+    <rect x="690" y="162" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="805" y="184" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">3. Quality flags</text>
+    <rect x="690" y="210" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="805" y="232" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">4. Missing information</text>
+    <rect x="690" y="258" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="805" y="280" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">5. Clarifying questions</text>
+    <rect x="690" y="306" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="805" y="328" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">6. Related prior work</text>
+    <rect x="690" y="354" width="230" height="34" rx="6" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="805" y="376" font-size="14" font-weight="400" text-anchor="middle" fill="#E6EDF3">7. Source summary</text>
+    <path d="M40,297.0 V349.0 A85.0,8 0 0 0 210,349.0 V297.0" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <ellipse cx="125" cy="297.0" rx="85" ry="8" fill="none" stroke="#30363D" stroke-width="1.5"/>
+    <text x="125" y="332" font-size="14" text-anchor="middle">Completed intakes</text>
+    <path d="M210,83 H262" fill="none" stroke="#E6EDF3" stroke-width="1.5"/>
+    <path d="M210,131 H262" fill="none" stroke="#E6EDF3" stroke-width="1.5"/>
+    <path d="M210,179 H262" fill="none" stroke="#E6EDF3" stroke-width="1.5"/>
+    <path d="M262,179 V83 H328" fill="none" stroke="#E6EDF3" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M445,100 V113" fill="none" stroke="#E6EDF3" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M445,148 V161" fill="none" stroke="#E6EDF3" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M445,196 V209" fill="none" stroke="#E6EDF3" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M445,244 V257" fill="none" stroke="#E6EDF3" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M445,292 V305" fill="none" stroke="#E6EDF3" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M445,340 V353" fill="none" stroke="#E6EDF3" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M212,323 H328" fill="none" stroke="#E6EDF3" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M560,371 H640 V83" fill="none" stroke="#3FB950" stroke-width="1.5"/>
+    <path d="M640,83 H688" fill="none" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+    <path d="M640,131 H688" fill="none" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+    <path d="M640,179 H688" fill="none" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+    <path d="M640,227 H688" fill="none" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+    <path d="M640,275 H688" fill="none" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+    <path d="M640,323 H688" fill="none" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+    <path d="M640,371 H688" fill="none" stroke="#3FB950" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+  </g>
+</svg>

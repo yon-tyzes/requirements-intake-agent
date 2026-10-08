@@ -1,0 +1,22 @@
+# Build output
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Never commit real evaluation data
+evals/data/
+evals/results/
+*.golden.csv

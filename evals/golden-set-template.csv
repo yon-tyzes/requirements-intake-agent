@@ -1,0 +1,2 @@
+case_id,intake_reference,request_type,external_party_involved,raw_material_location,final_intake_location,follow_up_questions,scope_changed_during_requirements,known_related_intake,notes
+case-01,,,yes/no,,,"Question 1; Question 2",yes/no,,

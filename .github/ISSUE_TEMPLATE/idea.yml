@@ -1,0 +1,21 @@
+name: Idea
+description: Suggest a check, question topic, platform guide, or other improvement.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What do you propose?
+    validations:
+      required: true
+  - type: textarea
+    id: general
+    attributes:
+      label: Would this help most organizations, or mainly yours?
+      description: Organization-specific changes usually belong in your own config/ files.
